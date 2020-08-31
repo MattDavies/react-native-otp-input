@@ -1,7 +1,7 @@
 /// <reference path="index.d.ts" />
 import { InputProps, OTPInputViewState } from '@twotalltotems/react-native-otp-input';
 import React, { Component } from 'react'
-import { View, TextInput, TouchableWithoutFeedback, Keyboard, Platform, I18nManager, EmitterSubscription, Clipboard } from 'react-native'
+import { View, TextInput, TouchableWithoutFeedback, Keyboard, Platform, I18nManager, EmitterSubscription, Clipboard, InteractionManager } from 'react-native'
 import styles from './styles'
 import { isAutoFillSupported } from './helpers/device'
 import { codeToArray } from './helpers/codeToArray'
@@ -44,7 +44,9 @@ export default class OTPInputView extends Component<InputProps, OTPInputViewStat
 
     componentDidMount() {
         this.copyCodeFromClipBoardOnAndroid()
-        this.bringUpKeyBoardIfNeeded()
+        InteractionManager.runAfterInteractions(() => {
+            this.bringUpKeyBoardIfNeeded();
+        });
         this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this.handleKeyboardDidHide)
     }
 
