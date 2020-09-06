@@ -211,6 +211,7 @@ export default class OTPInputView extends Component<InputProps, OTPInputViewStat
                     placeholder={placeholderCharacter}
                     placeholderTextColor={placeholderTextColor || defaultPlaceholderTextColor}
                     caretHidden={caretHidden}
+                    maxLength={1}
                 />
             </View>
         )
