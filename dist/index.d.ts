@@ -1,11 +1,10 @@
 /// <reference path="../index.d.ts" />
-import { InputProps, OTPInputViewState } from '@twotalltotems/react-native-otp-input';
-import { Component } from 'react';
-import { TextInput } from 'react-native';
+import { InputProps, OTPInputViewState } from "@twotalltotems/react-native-otp-input";
+import { Component } from "react";
+import { TextInput } from "react-native";
 export default class OTPInputView extends Component<InputProps, OTPInputViewState> {
     static defaultProps: InputProps;
     private fields;
-    private keyboardDidHideListener?;
     private timer?;
     private hasCheckedClipBoard?;
     private clipBoardCode?;
@@ -16,7 +15,6 @@ export default class OTPInputView extends Component<InputProps, OTPInputViewStat
     private copyCodeFromClipBoardOnAndroid;
     bringUpKeyBoardIfNeeded: () => void;
     getDigits: () => string[];
-    private handleKeyboardDidHide;
     private notifyCodeChanged;
     checkPinCodeFromClipBoard: () => void;
     private handleChangeText;
