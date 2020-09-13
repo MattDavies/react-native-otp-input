@@ -86,8 +86,7 @@ export default class OTPInputView extends Component {
             let result = newdigits.join("");
             if (result.length >= pinCount) {
                 onCodeFilled && onCodeFilled(result);
-                this.focusField(pinCount - 1);
-                this.blurAllFields();
+                this.focusField(index);
             }
             else {
                 if (text.length > 0 && index < pinCount - 1) {
