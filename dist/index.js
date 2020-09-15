@@ -160,9 +160,12 @@ export default class OTPInputView extends Component {
         };
     }
     UNSAFE_componentWillReceiveProps(nextProps) {
-        const { code } = this.props;
+        const { code, success } = this.props;
         if (nextProps.code !== code) {
             this.setState({ digits: codeToArray(nextProps.code) });
+        }
+        if (nextProps.success && !success) {
+            this.blurAllFields();
         }
     }
     componentDidMount() {
