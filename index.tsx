@@ -261,6 +261,8 @@ export default class OTPInputView extends Component<
           }
           caretHidden={caretHidden}
           maxLength={1}
+          autoCorrect={false}
+          autoCompleteType="off"
         />
       </View>
     );
