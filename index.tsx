@@ -260,7 +260,6 @@ export default class OTPInputView extends Component<
             placeholderTextColor || defaultPlaceholderTextColor
           }
           caretHidden={caretHidden}
-          maxLength={1}
           autoCorrect={false}
           autoCompleteType="off"
         />

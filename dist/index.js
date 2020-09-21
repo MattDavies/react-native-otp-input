@@ -145,7 +145,7 @@ export default class OTPInputView extends Component {
                 this.handleChangeText(index, text);
             }} onKeyPress={({ nativeEvent: { key } }) => {
                 this.handleKeyPressTextInput(index, key);
-            }} value={!clearInputs ? digits[index] : ""} keyboardAppearance={keyboardAppearance} keyboardType={keyboardType} textContentType={isAutoFillSupported ? "oneTimeCode" : "none"} key={index} selectionColor={selectionColor} secureTextEntry={secureTextEntry} editable={editable} placeholder={placeholderCharacter} placeholderTextColor={placeholderTextColor || defaultPlaceholderTextColor} caretHidden={caretHidden} maxLength={1} autoCorrect={false} autoCompleteType="off"/>
+            }} value={!clearInputs ? digits[index] : ""} keyboardAppearance={keyboardAppearance} keyboardType={keyboardType} textContentType={isAutoFillSupported ? "oneTimeCode" : "none"} key={index} selectionColor={selectionColor} secureTextEntry={secureTextEntry} editable={editable} placeholder={placeholderCharacter} placeholderTextColor={placeholderTextColor || defaultPlaceholderTextColor} caretHidden={caretHidden} autoCorrect={false} autoCompleteType="off"/>
       </View>);
         };
         this.renderTextFields = () => {
